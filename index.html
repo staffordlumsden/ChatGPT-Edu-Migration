@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A four-step guided workflow for carrying your useful AI context from Personal ChatGPT, Microsoft 365 Copilot, Gemini and other assistants into ChatGPT Edu." />
+  <meta name="theme-color" content="#1E232E" />
+  <title>Portable Personal Harness · Sydney Law School</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">P</div>
+      <div>Portable Personal Harness<small>Sydney Law School · guided migration workflow</small></div>
+    </div>
+    <div class="progress-mini" aria-label="Workflow progress">
+      <span id="progressLabel">Start</span>
+      <div id="progressDots" style="display:flex;gap:8px"></div>
+    </div>
+  </header>
+
+  <main id="deck" aria-live="polite">
+    <!-- Slide 0: provider launchpad -->
+    <section class="slide dark active" data-title="Start" data-step="0">
+      <div class="slide-inner">
+        <div class="kicker">Portable Personal Harness</div>
+        <div class="hero-grid">
+          <div>
+            <h1>Make your AI context portable</h1>
+            <div class="gold-rule"></div>
+            <p class="lede">Move the useful parts of how your AI tools know you — your context, preferences, voice and working patterns — <strong style="color:var(--gold)">into ChatGPT Edu</strong> without starting again from zero.</p>
+            <div class="slide-actions">
+              <button class="btn gold" data-next>Start moving to ChatGPT Edu →</button>
+              <button class="btn" id="resetProgress">Reset progress</button>
+            </div>
+          </div>
+          <div class="hero-callout">
+            <strong>Nothing is uploaded to this website.</strong>
+            <p>You copy prompts into the AI tools you already use. This guide stores only your progress in this browser.</p>
+            <p style="margin-top:14px"><strong>Account distinction:</strong> “Personal ChatGPT” means your own personal ChatGPT account. “ChatGPT Edu” means your University-managed workspace.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:46px">
+          <div class="kicker">Open the tools that know you</div>
+          <div class="provider-grid" id="providerGrid"></div>
+        </div>
+        <p class="speaker-note">Start with every assistant you have used enough to accumulate useful context. The workflow does not require a formal export: the assistant can produce a portable summary from whatever account-level context it can genuinely access.</p>
+      </div>
+    </section>
+
+
+    <!-- Slide 0b -->
+    <section class="slide" data-title="Overview" data-step="0">
+      <div class="slide-inner">
+        <div class="kicker">Workflow</div>
+        <h2>See the whole move first.</h2>
+        <p class="lede">Copy prompt. Run it. Save output. Move on.</p>
+        <div class="flow-overview">
+          <div class="flow-row" style="--accent:var(--red)">
+            <div class="flow-head"><div class="flow-step-num">1</div><h3>Extract</h3></div>
+            <div class="flow-line"><span class="flow-chip">Copy prompt</span><span class="flow-arrow">→</span><span class="flow-chip">Paste into each AI</span><span class="flow-arrow">→</span><span class="flow-chip">Save each output</span><span class="flow-arrow">→</span><span class="flow-chip">Next page</span></div>
+          </div>
+          <div class="flow-row" style="--accent:var(--gold)">
+            <div class="flow-head"><div class="flow-step-num">2</div><h3>Reconcile</h3></div>
+            <div class="flow-line"><span class="flow-chip">Attach or paste outputs</span><span class="flow-arrow">→</span><span class="flow-chip">Copy prompt</span><span class="flow-arrow">→</span><span class="flow-chip">Run</span><span class="flow-arrow">→</span><span class="flow-chip">Save Master Harness</span><span class="flow-arrow">→</span><span class="flow-chip">Next page</span></div>
+          </div>
+          <div class="flow-row" style="--accent:var(--teal)">
+            <div class="flow-head"><div class="flow-step-num">3</div><h3>Integrate</h3></div>
+            <div class="flow-line"><span class="flow-chip">Open ChatGPT Edu</span><span class="flow-arrow">→</span><span class="flow-chip">Attach or paste Master Harness</span><span class="flow-arrow">→</span><span class="flow-chip">Copy prompt</span><span class="flow-arrow">→</span><span class="flow-chip">Run</span><span class="flow-arrow">→</span><span class="flow-chip">Next page</span></div>
+          </div>
+          <div class="flow-row" style="--accent:var(--indigo)">
+            <div class="flow-head"><div class="flow-step-num">4</div><h3>Recognise</h3></div>
+            <div class="flow-line"><span class="flow-chip">Start a new chat</span><span class="flow-arrow">→</span><span class="flow-chip">Copy prompt</span><span class="flow-arrow">→</span><span class="flow-chip">Run</span><span class="flow-arrow">→</span><span class="flow-chip">Check recognition</span><span class="flow-arrow">→</span><span class="flow-chip">Done</span></div>
+          </div>
+        </div>
+        <div class="slide-actions"><button class="btn" data-prev>← Back</button><button class="btn red" data-next>Go to Step 01 →</button></div>
+        <p class="speaker-note">This page is the map. Each next page gives you the prompt for that step.</p>
+      </div>
+    </section>
+
+    <!-- Slide 1 -->
+    <section class="slide" data-title="Extract" data-step="1" style="--accent:var(--red)">
+      <div class="slide-inner">
+        <div class="kicker">Step 01 · Extract</div>
+        <h2>Ask each AI what is worth carrying forward.</h2>
+        <p class="lede">Use the same prompt in each AI assistant you use. Each one creates a short personal-harness file containing the durable context worth carrying forward.</p>
+        <div class="roadmap" data-roadmap></div>
+        <div class="step-grid">
+          <div class="card">
+            <div class="eyebrow">What you are doing</div>
+            <div class="number-big">01</div>
+            <h3>Create one personal-harness file per AI tool</h3>
+            <p>Paste the prompt into each AI assistant that knows you well. Save each response as Markdown or plain text.</p>
+            <div class="why-card">
+              <strong>Why this works</strong>
+              <p>Each AI may know a different part of your context. Using one prompt makes the outputs easy to combine in the next step.</p>
+            </div>
+            <div class="why-card rose">
+              <strong>Important limitation</strong>
+              <p>An assistant may not be able to see your full history or memory. The prompt explicitly tells it not to invent inaccessible information.</p>
+            </div>
+          </div>
+          <div class="prompt-panel">
+            <div class="prompt-head"><div><strong>Universal extraction prompt</strong><br><span>Use this in each source AI</span></div><div class="prompt-actions"><button class="icon-btn" data-copy="promptExtract">Copy prompt</button><button class="icon-btn" data-download="promptExtract" data-file="portable-harness-extract.md">Download .md</button></div></div>
+            <div class="prompt-scroll" id="promptExtract"></div>
+          </div>
+        </div>
+        <div class="banner">When you have two or more outputs, <strong>do not concatenate them manually.</strong> Reconcile them.</div>
+        <div class="slide-actions"><button class="btn" data-prev>← Back</button><button class="btn red" data-complete="1" data-next>Done — reconcile my sources →</button></div>
+        <p class="speaker-note">The extraction prompt privileges durable context and explicit user statements. It deliberately separates global working preferences from temporary or project-specific information.</p>
+      </div>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="slide" data-title="Reconcile" data-step="2" style="--accent:var(--gold)">
+      <div class="slide-inner">
+        <div class="kicker" style="color:var(--gold)">Step 02 · Reconcile</div>
+        <h2>Turn several versions of “you” into one source of truth.</h2>
+        <p class="lede">Choose one AI tool as your workspace. Add the harness files from Step 1 and run the prompt to combine them into one clean Master Harness.</p>
+        <div class="roadmap" data-roadmap></div>
+        <div class="step-grid">
+          <div class="card">
+            <div class="eyebrow" style="color:var(--gold)">What you are doing</div>
+            <div class="number-big" style="color:var(--gold)">02</div>
+            <h3>Create the Master Portable Personal Harness</h3>
+            <p>Attach or paste all of your Step 1 harnesses, then run the reconciliation prompt. Review any conflicts it flags and save the result.</p>
+            <div class="why-card">
+              <strong>Why not just merge the files?</strong>
+              <p>Reconciliation removes duplication, keeps useful differences and flags genuine conflicts instead of guessing.</p>
+            </div>
+            <div class="source-strip"><span class="source-chip">Use your preferred AI tool or surface</span></div>
+          </div>
+          <div class="prompt-panel">
+            <div class="prompt-head"><div><strong>Merge & reconciliation prompt</strong><br><span>Use with all Stage 1 outputs</span></div><div class="prompt-actions"><button class="icon-btn" data-copy="promptReconcile">Copy prompt</button><button class="icon-btn" data-download="promptReconcile" data-file="portable-harness-reconcile.md">Download .md</button></div></div>
+            <div class="prompt-scroll" id="promptReconcile"></div>
+          </div>
+        </div>
+        <div class="banner">The Master Harness becomes your <strong>platform-neutral source of truth</strong>. Keep a copy outside any single AI service.</div>
+        <div class="slide-actions"><button class="btn" data-prev>← Back</button><button class="btn gold" data-complete="2" data-next>Done — integrate into ChatGPT Edu →</button></div>
+        <p class="speaker-note">This stage is the epistemic checkpoint: explicit information, repeated evidence, inference and conflict are treated differently. The user remains the final authority.</p>
+      </div>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="slide" data-title="Integrate" data-step="3" style="--accent:var(--teal)">
+      <div class="slide-inner">
+        <div class="kicker" style="color:var(--teal)">Step 03 · Integrate</div>
+        <h2>Give ChatGPT Edu the smallest useful version of your context.</h2>
+        <p class="lede">Move the durable parts of your Master Harness into ChatGPT Edu. ChatGPT will tell you whether your workspace can use them persistently.</p>
+        <div class="roadmap" data-roadmap></div>
+        <div class="step-grid">
+          <div class="card">
+            <div class="eyebrow" style="color:var(--teal)">What you are doing</div>
+            <div class="number-big" style="color:var(--teal)">03</div>
+            <h3>Move your durable context into ChatGPT Edu</h3>
+            <p>Open ChatGPT Edu, attach or paste the Master Harness, then run the integration prompt. Keep temporary or project-specific material out of persistent personalisation.</p>
+            <div class="why-card">
+              <strong>Persistence is workspace-dependent</strong>
+              <p>Memory and personalisation depend on workspace settings. If persistence is unavailable, ChatGPT should give you one clear next step.</p>
+            </div>
+            <div class="why-card rose">
+              <strong>Before you integrate</strong>
+              <p>Do not migrate secrets, credentials or material you would not want governed by your institution's workspace policies.</p>
+            </div>
+            <div class="source-strip"><a class="source-chip" href="https://chatgpt.com" target="_blank" rel="noopener">Open ChatGPT Edu ↗</a><a class="source-chip" href="https://help.openai.com/en/articles/8590148" target="_blank" rel="noopener">Memory help ↗</a></div>
+          </div>
+          <div class="prompt-panel">
+            <div class="prompt-head"><div><strong>ChatGPT Edu integration prompt</strong><br><span>Use with the Master Harness</span></div><div class="prompt-actions"><button class="icon-btn" data-copy="promptIntegrate">Copy prompt</button><button class="icon-btn" data-download="promptIntegrate" data-file="portable-harness-integrate.md">Download .md</button></div></div>
+            <div class="prompt-scroll" id="promptIntegrate"></div>
+          </div>
+        </div>
+        <div class="banner">A successful migration should be <strong>recognisable</strong>, not merely reported as “done”. Test it in a fresh chat.</div>
+        <div class="slide-actions"><button class="btn" data-prev>← Back</button><button class="btn teal" data-complete="3" data-next>Done — verify that ChatGPT recognises me →</button></div>
+        <p class="speaker-note">The destination is not a dump of the old archive. It is a compact, durable layer that allows the new system to respond appropriately from the start.</p>
+      </div>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="slide" data-title="Recognise" data-step="4" style="--accent:var(--indigo)">
+      <div class="slide-inner">
+        <div class="kicker" style="color:var(--indigo)">Step 04 · Recognise</div>
+        <h2>Start a fresh chat. Does it still feel like your ChatGPT?</h2>
+        <p class="lede">The clean-room check tests whether useful personal context survived beyond the migration conversation. If it did, ChatGPT should be able to describe how it understands you without reconstructing that information from the current thread.</p>
+        <div class="roadmap" data-roadmap></div>
+        <div class="step-grid">
+          <div>
+            <div class="recognition-grid">
+              <div class="recognition-card"><h4>I understand who you are</h4><p>Core professional or personal context is accurate and current.</p></div>
+              <div class="recognition-card"><h4>I understand how you work</h4><p>Strong interaction and evidence preferences are visible.</p></div>
+              <div class="recognition-card"><h4>I understand your voice</h4><p>The description is specific enough to be recognisable to you.</p></div>
+              <div class="recognition-card"><h4>I act differently</h4><p>Concrete response behaviours follow from the migrated context.</p></div>
+            </div>
+            <div class="why-card" style="margin-top:14px">
+              <strong>The test is intentionally simple</strong>
+              <p>If the output feels generic, incomplete or wrong, do not keep adding more history. Correct the Master Harness or the persistent personalisation layer, then test again.</p>
+            </div>
+          </div>
+          <div class="prompt-panel">
+            <div class="prompt-head"><div><strong>Recognition check</strong><br><span>Run this in a brand-new chat</span></div><div class="prompt-actions"><button class="icon-btn" data-copy="promptRecognise">Copy prompt</button><button class="icon-btn" data-download="promptRecognise" data-file="portable-harness-recognition-check.md">Download .md</button></div></div>
+            <div class="prompt-scroll" id="promptRecognise"></div>
+          </div>
+        </div>
+        <div class="completion">
+          <div class="card">
+            <span class="status-pill">✓ Portable source of truth</span>
+            <h3 style="margin-top:14px">Keep the Master Harness</h3>
+            <p>Your master file is the portable artefact. ChatGPT Edu is only one destination. Update the master when important, durable things about your work or preferences change.</p>
+          </div>
+          <div class="card">
+            <span class="status-pill">✓ User-controlled</span>
+            <h3 style="margin-top:14px">You remain the authority</h3>
+            <p>No model's inference should silently become a fact about you. Review, correct and prune your harness when needed.</p>
+          </div>
+        </div>
+        <div class="slide-actions"><button class="btn" data-prev>← Back</button><button class="btn indigo" data-complete="4" id="finishBtn">Mark workflow complete ✓</button></div>
+        <p class="speaker-note">Recognition is the usability criterion. The user should immediately recognise the migrated profile and understand what will change in future interactions.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="privacy-note"><span class="privacy-dot"></span><span>Local guide · no personal content uploaded here</span></div>
+    <div class="footer-nav"><button class="nav-btn" id="prevBtn" aria-label="Previous slide">←</button><button class="nav-btn" id="nextBtn" aria-label="Next slide">→</button><span class="page-count" id="pageCount">01 / 06</span></div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
